@@ -1,0 +1,86 @@
+/* PHONESTREAM Premium Color Palette */
+:root {
+  /* Gold/Metallic Colors */
+  --gold-primary: #d4af37;
+  --gold-secondary: #f4d03f;
+  --gold-dark: #b8941f;
+  --gold-light: #f7e98e;
+  --gold-metallic: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
+  
+  /* Dark Blue Accents */
+  --blue-primary: #1e3a5f;
+  --blue-secondary: #2563eb;
+  --blue-glow: #3b82f6;
+  --blue-dark: #0f172a;
+  
+  /* Dark Backgrounds */
+  --bg-black: #0a0a0a;
+  --bg-charcoal: #1a1a1a;
+  --bg-dark: #1f1f1f;
+  --bg-textured: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --bg-tertiary: #f0f0f0;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #808080;
+  --border-color: #e5e5e5;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --accent: var(--gold-primary);
+  --accent-hover: var(--gold-dark);
+  --accent-gradient: var(--gold-metallic);
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --card-bg: #ffffff;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  --text-primary: #ffffff;
+  --text-secondary: #d4af37;
+  --text-tertiary: #999999;
+  --border-color: rgba(212, 175, 55, 0.2);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --accent: var(--gold-primary);
+  --accent-hover: var(--gold-light);
+  --accent-gradient: var(--gold-metallic);
+  --blue-accent: var(--blue-glow);
+  --success: #34d399;
+  --error: #f87171;
+  --warning: #fbbf24;
+  --card-bg: rgba(26, 26, 26, 0.8);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 40px rgba(212, 175, 55, 0.1);
+  
+  /* Background texture effect */
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 98px,
+      rgba(212, 175, 55, 0.03) 100px
+    );
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.app.light {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.app.dark {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
